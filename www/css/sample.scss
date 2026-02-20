@@ -1,0 +1,48 @@
+@use "./tokens" as *;
+
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+
+  .card {
+    padding: calc(#{$spacing-layout-page-padding} * 1.5);
+    border: 1px solid color-mix(in srgb, $color-text-primary 12%, transparent);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(17, 24, 39, 0.08);
+    display: grid;
+    gap: $spacing-component-button-padding;
+    max-width: 420px;
+    width: 100%;
+    background: $color-background-default;
+  }
+
+  .title {
+    margin: 0;
+    font-size: $typography-heading-font-size;
+    font-weight: $typography-heading-font-weight;
+    color: $color-text-primary;
+  }
+
+  .desc {
+    margin: 0;
+    color: color-mix(in srgb, $color-text-primary 80%, transparent);
+  }
+
+  .btn-primary {
+    appearance: none;
+    border: none;
+    border-radius: 10px;
+    padding: $spacing-component-button-padding $spacing-layout-page-padding;
+    font-size: $typography-body-font-size;
+    font-weight: $typography-body-font-weight;
+    color: #fff;
+    background: $color-brand-primary;
+    cursor: pointer;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: color-mix(in srgb, $color-brand-primary 85%, black);
+    }
+  }
+}

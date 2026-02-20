@@ -1,0 +1,24 @@
+{
+  "name": "publishing-figma",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Publishing workspace consuming designcenter-figma tokens",
+  "scripts": {
+    "start": "concurrently -k \"yarn watch:tokens\" \"vite --open\"",
+    "watch:tokens": "npm --prefix ../designcenter-figma run watch:tokens",
+    "build:tokens": "npm --prefix ../designcenter-figma run build:tokens",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.4",
+    "concurrently": "^7.6.0",
+    "playwright": "1.37.1",
+    "sass": "^1.70.0",
+    "vite": "^4.5.3"
+  }
+}
